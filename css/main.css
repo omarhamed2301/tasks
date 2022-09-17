@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Cairo";
+}
+li{
+    list-style: none;
+}
+body{
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(189,43,43,1) 50%, rgba(252,176,69,1) 100%);
+
+}
+
+.main-input{
+    position: relative;
+}
+.main-input button {
+    position: absolute;
+    right: 320px;
+    top: 3px;
+    font-size: 20px;
+    border: 1px solid purple;
+    background-color: purple;
+    padding: 0px 4px;
+    color: white;
+}
+.main-input .deleteAll{
+    position: absolute;
+    right: 285px;
+    top: 3px;
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+    display: none;
+}
+.main-input .deleteAll::after{
+    content: "Delete All";
+    position: absolute;
+    right: -30px;
+    width: 80px;
+    top: -20px;
+    font-size: 13px;
+    color: red;
+    font-weight: bold;
+    background-color: white;
+    padding: 2px;
+    border-radius: 3px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all;
+}
+.main-input .deleteAll:hover::after{
+    opacity: 1;
+    visibility: visible;
+    top: -30px;
+}
+.main-input .warning{
+    text-align: center;
+}
+.main-input .warning-label{
+    background-color: white;
+    color: red;
+    display: inline;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 30px;
+    display: none;
+}
+#list li{
+    position: relative;
+}
+#list button{
+    position: absolute;
+    right: 40px;
+    top: 3px;
+    border: none;
+    background-color: rgb(2, 162, 2);
+    color: white;
+    font-size: 20px;
+    padding: 0px 5px;
+}
+#list .trash{
+    position: absolute;
+    right: 7px;
+    top: 3px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    padding: 0px 5px;
+}
+#list li{
+    margin-bottom: 15px !important;
+    transform: scale(1.1);
+}
+@media screen and (max-width: 600px) {
+    #list li{
+        width: 100% !important;
+    }
+}
